@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Oddjob - To Do</title>
+</head>
+<body>
+
+	<h1>To Do</h1>
+	
+	<h3>Version 1.5.0 (Due Spring 2015)</h3>
+	
+	<ul>		
+		<li>Move to Java 1.8.
+		</li>
+		
+		<li>Re do the web interface. Replace the current JSF implementation 
+		with a JSON web service and a Java Script client. Include Jetty
+		so no separate deployment is necessary.
+		</li>	
+	</ul>
+		
+	<h3>As Yet Unscheduled</h3>
+	<ul>
+		<li>Convert documentation into DocBook so it can be
+		available in PDF and as a single HTML.
+		</li>
+		
+		<li>Use The idea of flavours introduced for services 
+		for the supported tags in Oddjob Designer. At the moment a date can be 
+		assigned to an XML field because they are both strings. There 
+		should be string flavours 'xml' and 'date'. This should probably 
+		also be incorporated into support for JSR330 Qualifiers.
+		</li>
+		
+		<li>Improve all Oddjob's file jobs (copy, rename, delete etc.)
+		and include filtering and selection as offered by Ant.</li>
+	
+		<li>Create a Web integration Oddball. Include the ability to 
+		download files and invoke Web Services from Oddjob.</li>
+		
+		<li>Look at persisting log messages as part of Oddjob's persistence 
+		framework so they can be retrieved by an 
+		<a href="http://rgordon.co.uk/oddjob/reference/org/oddjob/persist/ArchiveBrowserJob.html">archive-browser</a>.
+		</li>
+		
+		<li>Create an SSH Oddball including both shell and file transfer 
+		capabilities.</li>
+		
+		<li>Investigate Oddjob queue integration. A nice and easy way 
+		to distribute Oddjob work would be to have a central producer queue
+		Oddjob configurations for distributed slave processes to consume and
+		execute.</li>
+		
+		<li>Look at implementing something akin to Ant Macros in Oddjob.</li>
+		
+		<li>Look at incorporating Expression Language into Oddjob for 
+		attribute configuration.</li>
+	</ul>
+	
+</body>
+</html>

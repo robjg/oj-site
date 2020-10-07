@@ -1,0 +1,27 @@
+<index>
+	<group group-title="Oddjob">
+        <page page-title="Oddjob - Welcome" index-title="Welcome" index-href="index.html"/>
+        <page page-title="Oddjob - Features" index-title="Features" index-href="features.html"/>
+        <page page-title="Oddjob - Screenshots" index-title="Screenshots" index-href="screenshots.html"/>
+        <page page-title="Required But Unused" index-title="Blog" index-href="/blog"/>
+    </group>
+    
+	<group group-title="Using">
+        <page page-title="Oddjob - Download" index-title="Download" index-href="download.html"/>
+        <page page-title="Oddjob - Installing" index-title="Installing" index-href="installing.html"/>
+        <page page-title="Oddjob - User Guide" index-title="User Guide" index-href="userguide/index.html"/>
+    	<page page-title="Oddjob - Reference" index-title="Reference" index-href="reference/index.html"/>
+    </group>
+    
+	<group group-title="Support">
+        <page page-title="Oddjob - Forum" index-title="Forum" index-href="forum.html"/>
+        <page page-title="Oddjob - FAQ" index-title="FAQ" index-href="faq.html"/>
+    </group>
+    
+	<group group-title="Development">
+        <page page-title="Oddjob - Developing" index-title="Dev Guide" index-href="devguide/index.html"/>
+        <page page-title="Oddjob - Contribute" index-title="Contribute" index-href="contribute.html"/>
+        <page page-title="Oddjob - To Do" index-title="To Do" index-href="todo.html"/>
+    	<page page-title="Oddjob - API docs" index-title="API docs" index-href="api/index.html"/>
+    </group>
+</index>

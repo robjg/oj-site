@@ -1,0 +1,99 @@
+<!-- ===========================================================================
+
+	Build file for rgordon.co.uk
+	============================
+
+============================================================================ -->
+
+<project default="docs" basedir="." name="OJ Website">
+
+  <!-- =================================================================== -->
+  <!-- Initialization target                                               -->
+  <!-- =================================================================== -->
+  <target name="init">
+
+    <tstamp/>
+
+
+    <!-- =================================================================== -->
+    <!-- Properties                                                          -->
+    <!-- =================================================================== -->
+
+    <property name="Name"     value="OJ Website"/>
+    <property name="this.version"     value="1.5.0"/>
+    <property name="this.version.major"     value="1.5"/>
+
+    <echo message="--------------------------------------------------------------"/>
+    <echo message="            ${Name}                                 "/>
+    <echo message="--------------------------------------------------------------"/>
+    <echo message="Building with ${ant.version}"/>
+    <echo message="using build file ${ant.file}"/>
+    <echo message="--------------------------------------------------------------"/>
+
+    <property name="src.dir"      value="./src"/>
+    <property name="xdocs.dir"     value="${src.dir}/documentation/xdocs"/>
+	<property name="images.dir"   value="${src.dir}/documentation/images"/>
+    <property name="stylesheets.dir"  value="${src.dir}/documentation/stylesheets"/>
+
+    <property name="build.dir"      value="./build"/>
+    <property name="build.docs"     value="${build.dir}/docs"/>
+	<property name="build.xdocs"    value="${build.dir}/xdocs"/>
+    <property name="build.images"     value="${build.dir}/docs/images"/>
+	
+	<filter token="VERSION" value="${this.version}"/>
+	<filter token="MAJOR-VERSION" value="${this.version.major}"/>
+
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- Prepares the build directory                                        -->
+  <!-- =================================================================== -->
+ 
+  <target name="prepare" depends="clean">
+
+    <mkdir dir="${build.dir}"/>
+    <mkdir dir="${build.xdocs}"/>
+
+  </target>
+
+
+  <!-- =================================================================== -->
+  <!-- The documentation system                                            -->
+  <!-- =================================================================== -->
+ 
+  <target name="docs"
+          depends="prepare"
+          description="Builds the documentation">
+
+	<copy todir="${build.images}">
+		<fileset dir="${images.dir}"/>
+	</copy>
+
+	<copy todir="${build.docs}" filtering="off">
+		<fileset file="${stylesheets.dir}/oddjob.css"/>
+	</copy>
+  	
+	<copy todir="${build.xdocs}" filtering="on">
+		<fileset dir="${xdocs.dir}"/>
+	</copy>
+  	
+    <xslt basedir="${build.xdocs}" destdir="${build.docs}"
+             style="${stylesheets.dir}/site.xsl">
+      <param name="header" expression="header.html"/>
+      <param name="index-file" expression="sidebar.xml"/>
+      <mapper type="identity"/>
+	</xslt>
+	
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Clean targets                                                       -->
+  <!-- =================================================================== -->
+ 
+  <target name="clean" depends="init" description="Cleans the build directories"> 
+    <delete dir="${build.dir}"/>
+  </target>
+  
+</project>
+
+<!-- End of file -->
