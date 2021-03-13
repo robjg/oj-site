@@ -1,0 +1,172 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.boxes {
+    float: left;
+    width: 30%;
+    margin: 20px;
+    padding: 10px;
+    padding-left: 0px;
+    height: auto;
+
+    border: 5px solid #FF4000;
+
+    text-align: center;
+}
+
+.boxes:hover {
+    box-shadow: 10px 0px 15px rgb(170, 170, 170), -10px -0px 15px rgb(170, 170, 170);
+    box-shadow: 0px 10px 15px rgb(170, 170, 170), -0px -10px 15px rgb(170, 170, 170);
+}
+
+li{
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.ticks {
+    height: 17px;
+    margin: 0px;
+    margin: 3px;
+    padding: 0px;
+    align-content: left;
+}
+
+.features {
+    text-align: center;
+    margin-left: 150px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.title3 {
+    padding-bottom: 5px;
+
+}
+
+
+.container {
+    margin-right: -70px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    position: relative;
+    width: 50%;
+    float: right;
+    width: 300px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(126, 126, 126);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+      
+.container:hover .overlay {
+    height: 100%;
+}
+      
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: auto;
+
+    text-align: center;
+    padding-top: 100px;
+}
+ 
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 650px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(105, 105, 105);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
